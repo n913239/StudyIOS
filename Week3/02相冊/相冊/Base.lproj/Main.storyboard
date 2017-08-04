@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="相冊" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="04.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="5fz-sL-2jp">
+                                <rect key="frame" x="16" y="60" width="343" height="344"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="344" id="jRw-lL-qSS"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="67d-Vd-zZL">
+                                <rect key="frame" x="7.5" y="512" width="360" height="48"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eyd-b8-tA6">
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="48"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="150" id="F0B-4x-N2y"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="&lt;&lt;Prev"/>
+                                        <connections>
+                                            <action selector="preImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="klE-sY-kpy"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GEY-4k-mTi">
+                                        <rect key="frame" x="210" y="0.0" width="150" height="48"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="150" id="dhn-Wd-5X3"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Next&gt;&gt;"/>
+                                        <connections>
+                                            <action selector="changeImageAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wyx-i3-E9U"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="8qr-j7-R4f"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="67d-Vd-zZL" secondAttribute="bottom" constant="107" id="Hkx-Li-07U"/>
+                            <constraint firstItem="5fz-sL-2jp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OXo-fK-x5L"/>
+                            <constraint firstItem="5fz-sL-2jp" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="40" id="On3-fQ-n84"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="5fz-sL-2jp" secondAttribute="trailing" id="Vie-EO-LA0"/>
+                            <constraint firstItem="67d-Vd-zZL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="X7P-pV-jQR"/>
+                            <constraint firstItem="5fz-sL-2jp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="hX3-wv-1wD"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="galleryImageView" destination="5fz-sL-2jp" id="MEG-lh-JDY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-98.400000000000006" y="123.68815592203899"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="04.jpg" width="5760" height="3840"/>
+    </resources>
+</document>
